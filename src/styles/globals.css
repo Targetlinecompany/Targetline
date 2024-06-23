@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --microcis_blue: 210, 99%, 72%;
+    --microcis_green: 159, 66%, 42%;
+    --microcis_yellow: 51, 97%, 53%;
+
+    --microcis_light_blue: 211, 97%, 88%;
+    --microcis_light_green: 164, 100%, 92%;
+    --microcis_light_yellow: 50, 60%, 79%, 0.925;
+
+    --gray: 0, 0%, 87%;
+    --backgroundGray: 228, 45%, 98%;
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.swiper-wrapper {
+  height: max-content !important;
+
+  width: max-content;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 25%;
+  z-index: 1000;
+}
+
+.swiper-button-next {
+  right: -0px !important;
+}
+
+.swiper-button-prev {
+  left: 0px !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: '' !important;
+}
+
+.mySwiper {
+  max-width: 320px !important;
+  margin: 0 auto !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: '' !important;
+}
+
+.mySwiper .swiper-slide.swiper-slide-thumb-active > .swiper-slide\:w-16 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.mySwiper
+  .swiper-slide.swiper-slide-thumb-active
+  > .swiper-slide\:border-indigo-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity));
+}
+
+.teamswiper .swiper-wrapper {
+  height: max-content !important;
+  padding-bottom: 64px !important;
+}
+
+.teamswiper .swiper-horizontal > .swiper-scrollbar,
+.teamswiper .swiper-scrollbar.swiper-scrollbar-horizontal {
+  max-width: 140px !important;
+  height: 3px !important;
+  bottom: 25px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.teamswiper .swiper-pagination-fraction {
+  bottom: 0 !important;
+  padding-top: 16px !important;
+}
+
+.teamswiper .swiper-slide.swiper-slide-active > .slide\:border-indigo-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity));
+}
+
+.teamswiper .swiper-pagination-total {
+  color: rgb(156 163 175) !important;
+}
+
+.teamswiper .swiper-scrollbar-drag {
+  background: rgb(79 70 229);
+}
+
+.teamswiper .swiper-pagination-fraction {
+  bottom: 0 !important;
+}
+
+.teamswiper .swiper-button-prev:after,
+.teamswiper .swiper-rtl .swiper-button-next:after {
+  content: '' !important;
+}
+
+.teamswiper .swiper-button-prev {
+  top: 93% !important;
+  left: 35% !important;
+  z-index: 100 !important;
+}
+
+.teamswiper .swiper-button-next {
+  top: 93% !important;
+  right: 35% !important;
+  z-index: 100 !important;
+}
+
+.teamswiper .swiper-button-next:after,
+.teamswiper .swiper-rtl .swiper-button-prev:after {
+  content: '' !important;
+}
+
+.teamswiper .swiper-button-next svg,
+.teamswiper .swiper-button-prev svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.estimateStepper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.estimateStepper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+video {
+  clip-path: inset(1px 1px);
+}
+
+@keyframes underline-from-left {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.underline-animation {
+  position: relative;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--ourYellow);
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.underline-animation:hover::after,
+.underline-animation:focus::after,
+.underline-animation[data-active]::after,
+.underline-animation[data-state='open']::after {
+  width: 100%;
+}
