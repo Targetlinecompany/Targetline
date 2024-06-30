@@ -67,10 +67,7 @@ export default function RootLayout({
   return (
     <html className={inter.className}>
       <body>
-        <NavBar
-          items={navConfig.mainNav}
-          callActionButton={navConfig.callAction}
-        />
+        <NavBar items={navConfig.mainNav} />
         <FloatingNav navItems={navConfig.mainNav} />
         {children}
         <Footer />

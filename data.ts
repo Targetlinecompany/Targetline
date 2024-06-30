@@ -16,4 +16,4 @@ const adminsData = [
   },
 ];
 
-module.exports = adminsData;
+export { adminsData };

@@ -20,11 +20,10 @@ import { MainNavItem } from '@/types';
 interface MainNavProps {
   items?: MainNavItem[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  callActionButton: any;
   children?: React.ReactNode;
 }
 
-export function NavBar({ items, callActionButton, children }: MainNavProps) {
+export function NavBar({ items, children }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   return (
     <div className=' mx-auto mt-4 z-40 pb-6'>
@@ -38,7 +37,7 @@ export function NavBar({ items, callActionButton, children }: MainNavProps) {
             className='h-10 w-16 md:w-full md:h-14 z-10'
           />
         </Link>
-        <NavigationMenuDemo items={items} callActionButton={callActionButton} />
+        <NavigationMenuDemo items={items} />
 
         <button
           className='flex items-center space-x-2 lg:hidden'
@@ -48,9 +47,7 @@ export function NavBar({ items, callActionButton, children }: MainNavProps) {
         </button>
         {showMobileMenu && items && (
           // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          <MobileNav items={items} callActionButton={callActionButton}>
-            {children}
-          </MobileNav>
+          <MobileNav items={items}>{children}</MobileNav>
         )}
       </div>
     </div>

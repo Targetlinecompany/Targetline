@@ -10,14 +10,9 @@ import { MainNavItem } from '@/types';
 
 interface MobileNavProps {
   items: MainNavItem[];
-  callActionButton: MainNavItem[];
   children?: React.ReactNode;
 }
-export function MobileNav({
-  items,
-  callActionButton,
-  children,
-}: MobileNavProps) {
+export function MobileNav({ items, children }: MobileNavProps) {
   useLockBody();
   // eslint-disable-next-line unused-imports/no-unused-vars
   const [expandedSubmenus, setExpandedSubmenus] = React.useState<number[]>([]);
@@ -59,25 +54,6 @@ export function MobileNav({
                   'flex w-full items-center justify-between rounded-md p-2 text-sm font-medium hover:bg-ourLightBlue hover:text-accent-foreground focus:bg-ourLightBlue focus:text-accent-foreground',
                   item.disabled && 'cursor-not-allowed opacity-60'
                 )}
-              >
-                <div className='flex gab-3'>
-                  <Icon name={item.icon} size={20} />
-                  <span className='ml-2'>{item.title}</span>
-                </div>
-              </Link>
-            </div>
-          ))}
-
-          {callActionButton.map((item, index) => (
-            <div key={index} className='relative'>
-              <Link
-                className={cn(
-                  'flex w-full items-center justify-between rounded-md p-2 text-sm font-medium hover:bg-ourLightBlue hover:text-accent-foreground focus:bg-ourLightBlue focus:text-accent-foreground',
-                  item.disabled && 'cursor-not-allowed opacity-60'
-                )}
-                href={`${
-                  item.href === '/contact' ? 'tel:0093745450318' : item.href
-                }`}
               >
                 <div className='flex gab-3'>
                   <Icon name={item.icon} size={20} />
