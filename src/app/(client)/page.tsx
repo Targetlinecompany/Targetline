@@ -1,5 +1,5 @@
 import '@/lib/env';
 
 export default function HomePage() {
-  return <div>Home</div>;
+  return <main className='min-h-screen'>Home page</main>;
 }

@@ -5,12 +5,9 @@ import * as React from 'react';
 import '@/styles/globals.css';
 
 import Footer from '@/components/footer';
-import { FloatingNav } from '@/components/nav-bar/floating-navbar';
-import { NavBar } from '@/components/nav-bar/NavBar';
+import NavBar from '@/components/navbar/Navbar';
 
 import { siteConfig } from '@/constant/config';
-
-import { navConfig } from '../../constant/navItems';
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -67,8 +64,7 @@ export default function RootLayout({
   return (
     <html className={inter.className}>
       <body>
-        <NavBar items={navConfig.mainNav} />
-        <FloatingNav navItems={navConfig.mainNav} />
+        <NavBar />
         {children}
         <Footer />
       </body>
