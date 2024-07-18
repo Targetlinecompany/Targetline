@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import userIcon from 'public/images/home/userIcon.png';
 import logo from 'public/images/targetline logo.png';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa6';
 import { LuSearch } from 'react-icons/lu';
 
@@ -25,6 +25,7 @@ export default function MainNavBar({
   setSidebarOpen,
 }: Props): React.ReactNode {
   const router = usePathname();
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
 
   return (
     <nav id='#one'>
@@ -39,7 +40,9 @@ export default function MainNavBar({
               <Dropdown
                 key={index}
                 title={item.name}
-                items={item.dropdownItems}
+                items={item.dropdownItems.map((subItem) => ({
+                  ...subItem,
+                }))}
               />
             ) : (
               <Link
@@ -47,8 +50,8 @@ export default function MainNavBar({
                 href={item.href}
                 className={`text-white ${
                   router == item.href
-                    ? 'bg-[#D4D4D4] px-2 py-1 rounded-md font-bold'
-                    : 'hover:bg-[#D4D4D4] px-2 py-1 rounded-md hover:border-white-color text-white-color hover:bg-border-white-color transition-colors duration-300 text-lg'
+                    ? 'bg-neutral-800/65 px-2 py-1 rounded-md font-bold'
+                    : 'hover:hover:bg-neutral-700/60 px-2 py-1 rounded-md hover:border-white-color text-white-color hover:bg-border-white-color transition-colors duration-300 text-lg'
                 }`}
               >
                 {item.name}
@@ -58,9 +61,39 @@ export default function MainNavBar({
         </div>
 
         <div className='flex items-center justify-end gap-4'>
-          <div className='lg:flex items-center gap-4 hidden cursor-pointer'>
-            <LuSearch className='text-white' />
-            <Image alt='user image' src={userIcon} />
+          <div className='lg:flex items-center gap-4 hidden cursor-pointer relative'>
+            <div className='relative'>
+              <input
+                type='text'
+                className='rounded-lg p-1 pl-10 bg-transparent outline-none border-2 border-neutral-800 ring-0 text-white'
+                placeholder='Search...'
+              />
+              <LuSearch className='absolute left-2 top-2 text-white' />
+            </div>
+
+            <div className='relative'>
+              <Image
+                alt='user image'
+                src={userIcon}
+                onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
+              />
+              {isUserDropdownOpen && (
+                <div className='absolute -right-5 mt-3 bg-neutral-700/40 text-white w-36 rounded-md shadow-lg z-10'>
+                  <Link
+                    href='/create-account'
+                    className='block p-2 rounded-md hover:bg-neutral-700/60 cursor-pointer '
+                  >
+                    Create Account
+                  </Link>
+                  <Link
+                    href='/login'
+                    className='block p-2 rounded-md hover:bg-neutral-700/60 cursor-pointer'
+                  >
+                    Log In
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

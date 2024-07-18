@@ -4,7 +4,6 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
-import Footer from '@/components/footer';
 import NavBar from '@/components/navbar/Navbar';
 
 import { siteConfig } from '@/constant/config';
@@ -66,7 +65,6 @@ export default function RootLayout({
       <body>
         <NavBar />
         {children}
-        <Footer />
       </body>
     </html>
   );

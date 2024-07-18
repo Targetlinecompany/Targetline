@@ -126,6 +126,20 @@ export default function MobileSidebar({
                     </li>
                   </ul>
                 </nav>
+                <div className='text-white flex flex-col justify-center'>
+                  <Link
+                    href='/create-account'
+                    className='block rounded-md p-2 hover:bg-neutral-700/60 cursor-pointer '
+                  >
+                    Create Account
+                  </Link>
+                  <Link
+                    href='/login'
+                    className='block rounded-md p-2 hover:bg-neutral-700/60 cursor-pointer'
+                  >
+                    Log In
+                  </Link>
+                </div>
               </div>
             </DialogPanel>
           </TransitionChild>

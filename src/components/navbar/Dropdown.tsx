@@ -18,7 +18,7 @@ const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
   return (
     <div>
       <button
-        className=' relative flex items-center text-white hover:bg-[#D4D4D4] px-2 py-1 rounded-md transition-colors duration-300'
+        className=' relative flex items-center text-white hover:bg-neutral-700/60 px-2 py-1 rounded-md transition-colors duration-300'
         onClick={toggleDropdown}
       >
         {title}
@@ -29,13 +29,13 @@ const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
         )}
       </button>
       {isOpen && (
-        <div className='absolute mt-2 w-40 bg-gray-900/80 rounded-md shadow-lg z-50'>
-          <ul className='py-2'>
+        <div className='absolute mt-2 w-40 bg-neutral-700/40 rounded-md shadow-lg z-50'>
+          <ul className=''>
             {items.map((item, index) => (
               <li key={index} className=''>
                 <Link
                   href={item.href}
-                  className='block px-4 py-2 text-white hover:bg-slate-600/5'
+                  className='block px-4 py-2 text-white rounded-md hover:bg-neutral-700/60'
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
