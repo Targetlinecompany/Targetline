@@ -20,10 +20,7 @@ interface Props {
   setSidebarOpen: (open: boolean) => void;
 }
 
-export default function MainNavBar({
-  navigation,
-  setSidebarOpen,
-}: Props): React.ReactNode {
+export default function MainNavBar({ navigation, setSidebarOpen }: Props) {
   const router = usePathname();
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
 
