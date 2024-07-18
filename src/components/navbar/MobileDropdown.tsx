@@ -30,7 +30,7 @@ const MobileDropdown: React.FC<MobileDropdownProps> = ({ title, items }) => {
             <li key={index} className=''>
               <Link
                 href={item.href}
-                className='block px-4 py-2 text-white hover:bg-gray-200 rounded-md'
+                className='block px-4 py-2 text-white hover:bg-neutral-700/60 rounded-md'
               >
                 {item.name}
               </Link>
