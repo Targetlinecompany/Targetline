@@ -24,9 +24,6 @@ export const getCurrentUser = async () => {
     return currentUser;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    // eslint-disable-next-line no-console
-    console.log(error);
-
     return null;
   }
 };

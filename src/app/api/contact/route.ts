@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer, { Transporter } from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
@@ -73,10 +74,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     );
     // Send email to the customer
     await sendMail(customerMailOptions);
-
     await prisma.user.create({
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
+      // @ts-ignore
       fullName,
       email,
       company,

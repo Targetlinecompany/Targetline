@@ -1,55 +1,46 @@
 import Link from 'next/link';
 import React from 'react';
 
+import { cn } from '@/utils/cn';
+
 interface ButtonProps {
-  type?: 'button' | 'submit' | 'reset';
-  variant?: string;
-  as?: string;
-  href?: string;
-  label?: React.ReactNode;
-  onClick?: () => void;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   className?: string;
+  href?: string;
+  type?: 'submit' | 'reset' | 'button';
   disabled?: boolean;
 }
 
 export default function Button({
-  type = 'button',
-  as = 'button',
-  href = '#',
-  label,
-  onClick,
   children,
   className,
-
-  ...props
-}: ButtonProps) {
-  const { ...attrs } = props;
-
-  if (as === 'link') {
+  href,
+  type,
+  disabled,
+}: ButtonProps): React.ReactNode {
+  if (!href)
     return (
-      <Link
-        href={href}
-        className={`border border-black shadow-sm shadow-white py-2 px-4 rounded-md text-white
-          ${className}
-          `}
-        {...attrs}
+      <button
+        type={type}
+        className={cn(
+          'bg-slate-800 px-2 py-3 text-white transition hover:text-slate-800 hover:bg-slate-400 rounded',
+          className
+        )}
+        disabled={disabled}
       >
-        {label || children}
-      </Link>
+        {children}
+      </button>
     );
-  }
 
   return (
-    <button
-      type={type}
-      className={`border border-black shadow-sm shadow-white py-1 text-sm sm:font-medium sm:px-6 px-2 rounded-md text-white
-        ${className}
-        `}
-      onClick={onClick}
-      {...attrs}
+    <Link
+      href={href}
+      className={cn(
+        'bg-white to-black py-[18px] px-[60px] rounded-[8px]',
+        className
+      )}
     >
-      {label || children}
-    </button>
+      {children}
+    </Link>
   );
 }

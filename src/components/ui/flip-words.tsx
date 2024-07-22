@@ -1,10 +1,8 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { cn } from '@/utils/cn';
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let interval: any;
 
 export const FlipWords = ({
   words,
@@ -16,30 +14,28 @@ export const FlipWords = ({
   className?: string;
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+
+  // thanks for the fix Julian - https://github.com/Julian-AT
+  const startAnimation = useCallback(() => {
+    const word = words[words.indexOf(currentWord) + 1] || words[0];
+    setCurrentWord(word);
+    setIsAnimating(true);
+  }, [currentWord, words]);
 
   useEffect(() => {
-    startAnimation();
-
-    return () => {
-      clearInterval(interval);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const startAnimation = () => {
-    let i = 0;
-    interval = setInterval(() => {
-      i++;
-      if (i === words.length) {
-        i = 0;
-      }
-      const word = words[i];
-      setCurrentWord(word);
-    }, duration);
-  };
+    if (!isAnimating)
+      setTimeout(() => {
+        startAnimation();
+      }, duration);
+  }, [isAnimating, duration, startAnimation]);
 
   return (
-    <AnimatePresence>
+    <AnimatePresence
+      onExitComplete={() => {
+        setIsAnimating(false);
+      }}
+    >
       <motion.div
         initial={{
           opacity: 0,

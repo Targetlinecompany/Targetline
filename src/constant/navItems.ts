@@ -9,5 +9,10 @@ export const navConfig = {
       icon: 'HandPlatter',
       active: false,
     },
+    { title: 'Estimate', href: '/estimate', icon: 'Calculator', active: false },
+  ],
+  callAction: [
+    { title: 'Book A Meeting', href: '/book-meeting', icon: 'CalendarClock' },
+    { title: 'Make A Call', href: '/contact', icon: 'Headset' },
   ],
 };

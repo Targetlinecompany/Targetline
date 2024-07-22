@@ -2,7 +2,7 @@
 
 import { render, screen } from '@testing-library/react';
 
-import HomePage from '@/app/(client)/page';
+import HomePage from '@/app/[locale]/page';
 
 describe('Homepage', () => {
   it('renders the Components', () => {

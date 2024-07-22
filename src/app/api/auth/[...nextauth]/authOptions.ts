@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import bcrypt from 'bcrypt';
 import { AuthOptions } from 'next-auth';
@@ -20,40 +19,33 @@ export const authOptions: AuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        console.log('Received credentials:', credentials);
-
         try {
           if (!credentials?.email || !credentials.password) {
-            console.error('Invalid credentials');
-            return null;
+            throw new Error('Email and password required');
           }
 
           const user = await prisma.user.findUnique({
             where: { email: credentials.email },
           });
 
-          console.log('User found in database:', user);
-
           if (!user || !user.password) {
-            console.error('Email or password is incorrect!');
-            return null;
+            throw new Error('Invalid credentials');
           }
 
           const validPassword = await bcrypt.compare(
             credentials.password,
             user.password
           );
-          console.log('Valid password:', validPassword);
 
           if (!validPassword) {
-            console.error('Email or password is incorrect!');
-            return null;
+            throw new Error('Invalid credentials');
           }
 
           return user;
         } catch (error) {
-          console.error('Authorization error:', error);
-          return null;
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          //@ts-ignore
+          throw new Error(error);
         }
       },
     }),

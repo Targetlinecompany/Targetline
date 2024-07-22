@@ -1,5 +1,16 @@
-export { default } from 'next-auth/middleware';
+import createMiddleware from 'next-intl/middleware';
+
+import { defaultLocale, locales } from './config/locales';
+
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: locales,
+
+  // Used when no locale matches
+  defaultLocale: defaultLocale,
+});
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/api/post/:path*'],
+  // Match only internationalized pathnames
+  matcher: ['/', '/(en|da|pa)/:path*'],
 };
