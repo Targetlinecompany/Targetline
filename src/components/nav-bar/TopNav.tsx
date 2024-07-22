@@ -10,7 +10,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 
-import { Link, usePathname } from '@/navigation';
+import { Link } from '@/navigation';
 import { cn } from '@/utils/cn';
 
 import { FacebookIcon, InstagramIcon, TelegramIcon } from './Icons';
@@ -18,8 +18,6 @@ import LanguageDropdown from './LanguageDropdown';
 
 export default function TopNav() {
   const t = useTranslations('topNav');
-
-  const pathname = usePathname();
 
   const navigation = [{ name: t('link'), href: '/volunteer', current: false }];
 

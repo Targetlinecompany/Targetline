@@ -5,7 +5,6 @@ import HeroAbout from '@/components/about/hero-about';
 import OurMission from '@/components/about/our-mission';
 import { OurPromise } from '@/components/about/our-promise';
 import { TeamCarousel } from '@/components/about/team-section';
-import Partnership from '@/components/home/partnership';
 
 export default function AboutComponent() {
   return (
