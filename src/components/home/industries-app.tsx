@@ -36,7 +36,7 @@ export default function Industries() {
   };
 
   return (
-    <div className='max-w-full mb-24 bg-gray-900 sm:mb-32'>
+    <div className='max-w-full  bg-gray-900 '>
       <div className='max-w-5xl mx-auto lg:max-w-7xl'>
         <div className='relative overflow-hidden isolate'>
           <svg

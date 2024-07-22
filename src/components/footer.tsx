@@ -9,7 +9,7 @@ function Footer() {
   const t = useTranslations('nav');
   return (
     <footer className='bg-gray-900'>
-      <div className='mx-auto max-w-screen-xl space-y-8 px-4 py-10 sm:px-6 lg:space-y-10 mt-16 lg:px-8'>
+      <div className='mx-auto max-w-screen-xl space-y-8 px-4 py-10 sm:px-6 lg:space-y-10 border-t-2 border-gray-800 lg:px-8'>
         <div className='flex justify-between flex-col sm:flex-row gap-4'>
           <div>
             <div>
