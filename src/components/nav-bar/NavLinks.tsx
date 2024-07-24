@@ -2,11 +2,10 @@
 
 import { Popover } from '@headlessui/react';
 import { AnimatePresence, motion } from 'framer-motion';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useRef, useState } from 'react';
 
+import { Link, usePathname } from '@/navigation';
 import { cn } from '@/utils/cn';
 
 export function NavLinks() {
@@ -18,7 +17,6 @@ export function NavLinks() {
   const links = [
     [t('home'), '/'],
     [t('about'), '/about'],
-    [t('services'), '/services'],
   ];
 
   return (
@@ -29,7 +27,7 @@ export function NavLinks() {
           href={href}
           className={cn(
             'relative px-3 py-2 -mx-3 -my-2 text-sm font-semibold text-white transition-colors delay-150 rounded-lg hover:text-gray-900 hover:delay-0',
-            pathname === href && 'bg-gray-100'
+            pathname === href && 'bg-gray-100 text-gray-900'
           )}
           onMouseEnter={() => {
             if (timeoutRef.current) {

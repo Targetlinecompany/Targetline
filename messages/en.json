@@ -12,8 +12,25 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "services": "Services",
     "membership": "Membership"
+  },
+  "about": {
+    "boss": "Ali Reza Jafari - Company Manager",
+    "speech": "- With 17 years of experience across diverse markets, Targetline has attained unmatched expertise in sales and market psychology, spanning various industries. The addition of more specialists to the Targetline team, as well as academic disciplines such as coaching, entrepreneurship, talent acquisition, sales, marketing, advertising, psychology, sociology, and philosophy have bolstered our company’s ability - The next phase for Targetline revolves around IT sciences and virtual markets due to the recent surge in virtual sales. Consequently, we have established a team of experts in this field to deliver our services more professionally in website and application design and development. _ I recommend visiting our Targetline experts for further acquaintance",
+    "title": "Our team",
+    "lead": "Our team of experts in marketing, sales, and technology. We are ready to help you achieve your goals."
+  },
+  "footer": {
+    "heading": "By pooling our resources, knowledge, and skills, we make meaningful progress towards creating a world that is more just, sustainable, and equitable for all.",
+    "home": "Home",
+    "about": "About",
+    "membership": "Membership",
+    "backToTop": "Back to top",
+    "copyright": "© {date} Target Line. All rights reserved."
+  },
+  "partners": {
+    "title": "Top companies rely on us",
+    "description": "We are proud of our partners and their success in driving innovation."
   },
   "whatWeDo": {
     "whatWeDo": "What We Do?",

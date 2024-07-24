@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
-import Footer from '@/components/footer';
+import { Footer } from '@/components/footer';
 import { Header } from '@/components/nav-bar/Header';
 import LocaleWrapper from '@/components/providers/LocaleWrapper';
 
@@ -55,7 +55,7 @@ export default function RootLayout({
       dir={locale === 'en' ? 'ltr' : 'rtl'}
       className={montserrat.className}
     >
-      <body>
+      <body className='scroll-smooth'>
         <LocaleWrapper locale={locale}>
           <Header />
           {children}

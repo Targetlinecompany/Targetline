@@ -4,6 +4,21 @@ import React, { useEffect, useRef } from 'react';
 
 const LogoScroller: React.FC = () => {
   const logosRef = useRef<HTMLUListElement | null>(null);
+  const logos = [
+    'logo.png',
+    'logo1.png',
+    'logo2.png',
+    'logo3.png',
+    'logo4.png',
+    'logo5.png',
+    'logo6.png',
+    'logo7.png',
+    'logo8.png',
+    'logo9.png',
+    'logo10.png',
+    'logo11.png',
+    'logo12.png',
+  ];
 
   useEffect(() => {
     const ul = logosRef.current;
@@ -23,30 +38,16 @@ const LogoScroller: React.FC = () => {
         ref={logosRef}
         className='flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll'
       >
-        <li>
-          <Image src='/hero/spark.svg' alt='Facebook' width={100} height={80} />
-        </li>
-        <li>
-          <Image src='/hero/spark.svg' alt='Disney' width={100} height={80} />
-        </li>
-        <li>
-          <Image src='/hero/spark.svg' alt='Airbnb' width={100} height={80} />
-        </li>
-        <li>
-          <Image src='/hero/spark.svg' alt='Apple' width={100} height={80} />
-        </li>
-        <li>
-          <Image src='/hero/spark.svg' alt='Spark' width={100} height={80} />
-        </li>
-        <li>
-          <Image src='/hero/spark.svg' alt='Samsung' width={100} height={80} />
-        </li>
-        <li>
-          <Image src='/hero/spark.svg' alt='Quora' width={100} height={80} />
-        </li>
-        <li>
-          <Image src='/hero/spark.svg' alt='Sass' width={100} height={80} />
-        </li>
+        {logos.map((logo, index) => (
+          <li key={index}>
+            <Image
+              src={`/logos/${logo}`}
+              alt={`Logo ${index + 1}`}
+              width={100}
+              height={80}
+            />
+          </li>
+        ))}
       </ul>
     </div>
   );
