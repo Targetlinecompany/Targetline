@@ -10,33 +10,33 @@ export default function Hero() {
     <div className='bg-gray-900'>
       <div className='relative isolate pt-4 overflow-hidden'>
         <svg
-          className='absolute left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] -z-10'
           aria-hidden='true'
+          className='absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]'
         >
           <defs>
             <pattern
-              id='e813992c-7d03-4cc4-a2bd-151760b470a0'
-              width='200'
-              height='200'
               x='50%'
-              y='-1'
+              y={-1}
+              id='983e3e4c-de6d-4c3f-8d64-b9761d1534cc'
+              width={200}
+              height={200}
               patternUnits='userSpaceOnUse'
             >
-              <path d='M100 200V.5M.5 .5H200' fill='none'></path>
+              <path d='M.5 200V.5H200' fill='none' />
             </pattern>
           </defs>
-          <svg x='50%' y='-1' className='overflow-visible fill-gray-800'>
+          <svg x='50%' y={-1} className='overflow-visible fill-gray-800/20'>
             <path
-              d='M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z'
-              strokeWidth='0'
-            ></path>
+              d='M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z'
+              strokeWidth={0}
+            />
           </svg>
           <rect
+            fill='url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)'
             width='100%'
             height='100%'
-            strokeWidth='0'
-            fill='url(#e813992c-7d03-4cc4-a2bd-151760b470a0)'
-          ></rect>
+            strokeWidth={0}
+          />
         </svg>
         <div className='mx-auto max-w-7xl px-6 py-24 sm:py-8 lg:flex lg:items-center md:h-screen lg:gap-x-10 lg:px-8 lg:py-6 font-normal'>
           <div className='mx-auto max-w-2xl lg:mx-0 lg:flex-auto'>
