@@ -40,6 +40,52 @@ export function FacebookIcon(
   );
 }
 
+export function SpinnerIcon(
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      {...props}
+    >
+      <circle
+        className='opacity-25 '
+        cx='12'
+        cy='12'
+        r='10'
+        stroke='currentColor'
+        strokeWidth='4'
+      ></circle>
+      <path
+        className='opacity-75 '
+        fill='currentColor'
+        d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+      ></path>
+    </svg>
+  );
+}
+
+export function PhoneIcon(
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 20 20'
+      fill='currentColor'
+      aria-hidden='true'
+      {...props}
+    >
+      <path
+        fillRule='evenodd'
+        d='M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z'
+        clipRule='evenodd'
+      ></path>
+    </svg>
+  );
+}
 export function InstagramIcon(
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) {

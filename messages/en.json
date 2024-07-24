@@ -72,71 +72,18 @@
   },
 
   "contact": {
-    "heading": "Contact Us",
-    "lead": "Have a question or want to support our cause? Contact us today.",
-    "form": {
-      "firstName": {
-        "label": "First name",
-        "error": "First name is required"
-      },
-      "lastName": {
-        "label": "Last name",
-        "error": "Last name is required"
-      },
-      "organization": {
-        "label": "Organization"
-      },
-      "email": {
-        "label": "Email",
-        "error": "Email is required",
-        "patternError": "Email address is invalid"
-      },
-      "phone": {
-        "label": "Phone number",
-        "error": "Phone number is required",
-        "patternError": "Phone number is invalid"
-      },
-      "message": {
-        "label": "Message",
-        "error": "Message is required"
-      },
-      "submit": {
-        "label": "Let's talk",
-        "processing": "Processing..."
-      },
-      "responseMessage": "Data is successfully saved",
-      "processingMessage": "Form data is being processed..."
-    },
-    "FAQ": {
-      "heading": "Frequently asked questions",
-      "lead": "Can't find the answer you're looking for? Reach out to our support team",
-      "1stQuestion": "How can I donate to Raha Charity Foundation?",
-      "1stAnswer": "You can donate online through our website or contact us for other options.",
-      "2ndQuestion": "What programs does Raha Charity Foundation offer?",
-      "2ndAnswer": "We offer various programs including education, healthcare, nutrition, and psychosocial support.",
-      "3rdQuestion": "How can I volunteer with Raha Charity Foundation?",
-      "3rdAnswer": "Fill out our volunteer form on our website and we'll get in touch with you.",
-      "4thQuestion": "How are donations utilized by Raha Charity Foundation?",
-      "4thAnswer": "Donations are used to support our programs and provide assistance to those in need.",
-      "5thQuestion": "Can I sponsor a child through Raha Charity Foundation?",
-      "5thAnswer": "Yes, we have sponsorship programs available. Contact us for more information.",
-      "6thQuestion": "How can I get updates on Raha Charity Foundation's work?",
-      "6thAnswer": "Follow us on social media or our website for regular updates and news."
-    },
-    "getInTouch": {
-      "heading": "Get in touch",
-      "lead": "Reach out to us and be part of something bigger",
-      "collaborate": "Collaborate",
-      "sayHello": "Say Hello"
-    },
-    "location": {
-      "heading": "Locations",
-      "lead": "Find Us and Connect with Our Team",
-      "address": {
-        "heading": "Afghanistan",
-        "1stLine": "Ferdowsi 12, Mokhaberat St.,",
-        "2ndLine": "Herat, Afghanistan"
-      }
-    }
+    "getInTouch": "Get in touch",
+    "description": "Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut tincidunt integer elementum id sem. Arcu sed malesuada et magna.",
+    "address": "Address",
+    "telephone": "Telephone",
+    "email": "Email",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phoneNumber": "Phone number",
+    "message": "Message",
+    "sendMessage": "Send message",
+    "location": "545 Mavis Island, Chicago, IL 99191",
+    "tel": "+1 (555) 234-5678",
+    "mail": "hello@example.com"
   }
 }

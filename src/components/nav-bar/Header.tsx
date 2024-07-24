@@ -3,12 +3,12 @@
 import { Popover } from '@headlessui/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 import { Container } from '@/components/ui/Container';
 
+import { Link } from '@/navigation';
 import { cn } from '@/utils/cn';
 
 import { MobileNavLinks, NavLinks } from './NavLinks';

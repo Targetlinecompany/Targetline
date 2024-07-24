@@ -70,7 +70,6 @@ export function MobileNavLinks() {
   const links = [
     [t('home'), '/'],
     [t('about'), '/about'],
-    [t('services'), '/services'],
   ];
 
   return (
@@ -82,7 +81,7 @@ export function MobileNavLinks() {
           href={href}
           className={cn(
             'block text-base leading-7 -mx-2 tracking-tight text-white hover:text-gray-900 ',
-            href === pathname && 'text-gray-900 font-medium'
+            href === pathname && 'font-medium'
           )}
         >
           {label}
