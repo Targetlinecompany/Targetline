@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/Container';
 import { Link } from '@/navigation';
 
 import { BackToTop } from './BackToTop';
-import { FacebookIcon, InstagramIcon, TelegramIcon } from './Icons';
+import { FacebookIcon, InstagramIcon, TelegramIcon } from './icons';
 
 export function Footer() {
   const t = useTranslations('footer');
