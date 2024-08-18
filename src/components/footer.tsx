@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/Container';
 import { Link } from '@/navigation';
 
 import { BackToTop } from './BackToTop';
-import { FacebookIcon, InstagramIcon, TelegramIcon } from './icons';
+import { GithubIcon, InstagramIcon, TelegramIcon } from './icons';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -28,10 +28,10 @@ export function Footer() {
   ];
   const social = [
     {
-      name: 'Facebook',
+      name: 'GitHub',
       href: '',
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
-        <FacebookIcon {...props} />
+        <GithubIcon {...props} />
       ),
     },
     {
@@ -43,7 +43,7 @@ export function Footer() {
     },
     {
       name: 'Telegram',
-      href: '',
+      href: 'https://t.me/@targetlincompany',
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <TelegramIcon {...props} />
       ),
@@ -115,24 +115,16 @@ export function Footer() {
             <p className='text-sm leading-5 text-gray-400'>
               {t('copyright', { date: new Date().getFullYear() })}
             </p>
+            <p className='text-xs leading-5 text-gray-400'>{t('develop')}</p>
             <p className='mt-2 text-xs leading-5 text-gray-400 sr-only'>
               Built with love by{' '}
               <a
-                href='https://hassib.co'
+                href='https://github.com/SayeedMahdi'
                 target='_blank'
                 className='text-gray-300 hover:underline'
                 rel='noreferrer'
               >
-                Hassib Moddasser
-              </a>{' '}
-              and{' '}
-              <a
-                href='https://github.com/code-lish'
-                target='_blank'
-                className='text-gray-300 hover:underline'
-                rel='noreferrer'
-              >
-                Noor Mohammad Rahimi
+                Sayeed Mahdi Mousavi
               </a>
             </p>
           </div>

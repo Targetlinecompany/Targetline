@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/nav-bar/Header';
 import LocaleWrapper from '@/components/providers/LocaleWrapper';
+import AnimatedSocialMenu from '@/components/social';
 
 import { siteConfig } from '@/constant/config';
 import { montserrat } from '@/fonts/fonts';
@@ -59,6 +60,9 @@ export default function RootLayout({
         <LocaleWrapper locale={locale}>
           <Header />
           {children}
+          <div className='fixed bottom-0 left-0 right-10 z-50' dir='ltr'>
+            <AnimatedSocialMenu />
+          </div>
           <Footer />
         </LocaleWrapper>
       </body>

@@ -17,49 +17,53 @@
   "about": {
     "boss": "Ali Reza Jafari - Company Manager",
     "speech": "- With 17 years of experience across diverse markets, Targetline has attained unmatched expertise in sales and market psychology, spanning various industries. The addition of more specialists to the Targetline team, as well as academic disciplines such as coaching, entrepreneurship, talent acquisition, sales, marketing, advertising, psychology, sociology, and philosophy have bolstered our company’s ability - The next phase for Targetline revolves around IT sciences and virtual markets due to the recent surge in virtual sales. Consequently, we have established a team of experts in this field to deliver our services more professionally in website and application design and development. _ I recommend visiting our Targetline experts for further acquaintance",
-    "title": "Our team",
-    "lead": "Our team of experts in marketing, sales, and technology. We are ready to help you achieve your goals."
+    "title": "Meet our team",
+    "lead": "The Experts and Innovators Behind Our Success."
   },
   "footer": {
-    "heading": "By pooling our resources, knowledge, and skills, we make meaningful progress towards creating a world that is more just, sustainable, and equitable for all.",
+    "heading": "Our goal is to boost your sales so your customers will never forget you. Join us and experience the difference.",
     "home": "Home",
     "about": "About",
     "membership": "Membership",
     "backToTop": "Back to top",
-    "copyright": "© {date} Target Line. All rights reserved."
+    "copyright": "© {date} Target Line. All rights reserved.",
+    "develop": "develop with MarsCoders team."
   },
   "partners": {
-    "title": "Top companies rely on us",
-    "description": "We are proud of our partners and their success in driving innovation."
+    "title": "Companies that have trusted us",
+    "description": "We take pride in our partners and their advancements in innovation.",
+    "seeAll": "See all"
   },
   "whatWeDo": {
-    "whatWeDo": "What We Do?",
-    "weMakeEverything": "We make everything that you want.",
-    "specializeIn": "We specialize in delivering cutting-edge technology solutions that drive innovation and efficiency.",
+    "whatWeDo": "Our services?",
+    "weMakeEverything": "Whatever You Need, We Will Build It for You.",
+    "specializeIn": "We specialize in designing and developing advanced technologies that provide solutions to increase your sales.",
     "accordion": {
       "blockchain": {
-        "title": "Blockchain & NFT Expertise",
-        "description": "Create secure, transparent, and decentralized solutions leveraging blockchain technology for enhanced trust, traceability, and efficiency."
+        "title": "Business development",
+        "description": "Sales are a key part of your business. Our team offers innovative solutions to boost your business with expertise and dedication.  Trust Targetline and request a consultation today."
       },
       "ai": {
-        "title": "Artificial Intelligence",
-        "description": "Build innovative and user-friendly apps with the use of AI for personalization, analytics, automation, and more."
-      },
-      "mobile": {
-        "title": "Mobile Development",
-        "description": "Craft cutting-edge mobile applications for iOS and Android platforms, delivering seamless user experiences and robust functionality."
+        "title": "Business Coaching and Setup",
+        "description": "Starting a business can be challenging, but with our comprehensive coaching and support services, the process becomes easier and more successful. At Targetline, we assist you through every step, from planning to execution. Request a consultation today to get started."
       },
       "web": {
         "title": "Web Development",
-        "description": "Design and develop responsive, scalable web applications that drive engagement, conversions, and business growth across devices."
-      },
-      "uiUx": {
-        "title": "Ui Ux Design",
-        "description": "Create intuitive, visually appealing interfaces and user experiences that delight customers and enhance product usability and adoption."
+        "description": "Did you know a website is a money-making machine? If your business doesn’t have one yet, you’re missing out on a valuable asset.  At Targetline, we offer top-notch web development. Request a consultation now to get your business online."
       },
       "dataScience": {
         "title": "Data Science",
-        "description": "Our team of data scientists and machine learning experts can help you harness the power of data to make informed decisions."
+        "description": "Data Science involves analyzing data to extract valuable insights and improve decision-making. At Targetline, we help you uncover hidden patterns and enhance your business decisions through precise data analysis. Request a consultation today."
+      },
+
+      "mobile": {
+        "title": "App Development",
+        "description": "An app can significantly enhance your business. At Targetline, our team designs custom applications tailored to your specific needs. Request a consultation today to discover how Targetline can boost your business."
+      },
+
+      "uiUx": {
+        "title": "Ui/Ux Design",
+        "description": "At Targetline, we create beautiful user interfaces and optimized user experiences to ensure smooth and satisfying interactions for your users. For enhancing your product’s user experience, request a consultation today."
       }
     }
   },

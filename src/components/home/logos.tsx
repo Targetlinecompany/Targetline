@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
@@ -17,6 +18,11 @@ export default function Logos() {
               {t('description')}
             </p>
             <LogoScroller />
+            <p className='mt-6 text-lg leading-8 text-gray-300'>
+              <Link href='/en/more' className='text-white mt-2 hover:underline'>
+                {t('seeAll')}
+              </Link>
+            </p>
           </div>
         </div>
       </div>

@@ -5,19 +5,18 @@ import React, { useEffect, useRef } from 'react';
 const LogoScroller: React.FC = () => {
   const logosRef = useRef<HTMLUListElement | null>(null);
   const logos = [
-    'logo.png',
-    'logo1.png',
-    'logo2.png',
-    'logo3.png',
-    'logo4.png',
-    'logo5.png',
-    'logo6.png',
-    'logo7.png',
-    'logo8.png',
-    'logo9.png',
-    'logo10.png',
-    'logo11.png',
-    'logo12.png',
+    '1.png',
+    '2.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png',
+    '9.png',
+    '10.png',
+    '11.png',
+    '12.png',
   ];
 
   useEffect(() => {

@@ -13,7 +13,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { cn } from '@/utils/cn';
 
-import { FacebookIcon, InstagramIcon, TelegramIcon } from './Icons';
+import { GithubIcon, InstagramIcon, TelegramIcon } from './Icons';
 import LanguageDropdown from './LanguageDropdown';
 
 export default function TopNav() {
@@ -50,7 +50,7 @@ export default function TopNav() {
                   <p className='flex items-center text-xs text-gray-100 dir-ltr gap-x-1'>
                     <PhoneIcon className='size-4 rtl:-rotate-90 ltr:rotate-0' />
                     <Link
-                      href='tel:+93789714747'
+                      href='tel:09961740933'
                       className='font-medium tabular-nums'
                     >
                       {t('phone')}
@@ -59,7 +59,7 @@ export default function TopNav() {
                   <p className='flex items-center text-xs text-gray-100 dir-ltr gap-x-1'>
                     <EnvelopeIcon className='size-4' />
                     <Link
-                      href='mailto:info@rahafoundation.af'
+                      href='mailto:targetlinecompany@targetline.net'
                       className='font-sans font-medium'
                     >
                       {t('email')}
@@ -79,7 +79,7 @@ export default function TopNav() {
                       href='#'
                       aria-label='Visit us on Facebook'
                     >
-                      <FacebookIcon className='w-4 h-4 text-gray-100 hover:text-white' />
+                      <GithubIcon className='w-4 h-4 text-gray-100 hover:text-white' />
                     </a>
                     <a
                       target='_blank'
@@ -92,7 +92,7 @@ export default function TopNav() {
                     <a
                       target='_blank'
                       rel='noreferrer'
-                      href='#'
+                      href='@targetlincompany'
                       aria-label='Visit us on Telegram'
                     >
                       <TelegramIcon className='w-4 h-4 text-gray-100 hover:text-white' />
