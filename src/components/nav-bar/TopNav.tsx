@@ -76,7 +76,7 @@ export default function TopNav() {
                     <a
                       target='_blank'
                       rel='noreferrer'
-                      href='#'
+                      href='https://github.com/Targetlinecompany'
                       aria-label='Visit us on Facebook'
                     >
                       <GithubIcon className='w-4 h-4 text-gray-100 hover:text-white' />

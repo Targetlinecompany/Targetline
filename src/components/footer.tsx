@@ -29,7 +29,7 @@ export function Footer() {
   const social = [
     {
       name: 'GitHub',
-      href: '',
+      href: 'https://github.com/Targetlinecompany',
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <GithubIcon {...props} />
       ),

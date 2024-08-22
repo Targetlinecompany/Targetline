@@ -22,7 +22,7 @@ const socialIcons = [
   },
   {
     icon: IoLogoGithub,
-    href: 'https://www.github.com/SayeedMahdi',
+    href: 'https://github.com/Targetlinecompany',
     colorCode:
       'linear-gradient(45deg, #8a3ab9, #4c68d7, #cd486b, #fbad50, #fccc63, #bc2a8d, #e95950)',
   },

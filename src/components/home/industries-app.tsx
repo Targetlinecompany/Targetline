@@ -1,21 +1,35 @@
 'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-import { app_data } from '@/lib/industries-work';
+import { app_data_en, app_data_fa } from '@/lib/industries-work';
 
 export default function Industries() {
+  const [appData, setAppData] = useState(app_data_en); // Default to English data
+
+  useEffect(() => {
+    // Check the direction of the document
+    const dir = document.documentElement.dir;
+    if (dir === 'rtl') {
+      setAppData(app_data_fa);
+    } else {
+      setAppData(app_data_en);
+    }
+  }, []);
+
   const logos = [
-    '/svg/maktab_light.svg',
-    '/svg/anar_light.svg',
-    '/svg/doctoryab_light.svg',
-    '/svg/chanar_light.svg',
-    '/svg/farm_light.png',
+    '/industries/digi-logo.svg',
+    '/industries/quick-logo.png',
+    '/industries/handy-logo.png',
+    '/industries/ddr-logo.jpg',
+    '/industries/dol-logo.png',
   ];
 
   const pagination = {
@@ -25,7 +39,7 @@ export default function Industries() {
     // @ts-ignore
     renderBullet: function (index, className) {
       return `<img src="${logos[index]}" alt="${
-        app_data[index]?.title || ''
+        appData[index]?.title || ''
       }" class="swiper-pagination-bullet ${className}" />`;
     },
   };
@@ -36,7 +50,7 @@ export default function Industries() {
   };
 
   return (
-    <div className='max-w-full  bg-gray-900 '>
+    <div className='max-w-full bg-gray-900'>
       <div className='max-w-5xl mx-auto lg:max-w-7xl'>
         <div className='relative overflow-hidden isolate'>
           <svg
@@ -68,7 +82,7 @@ export default function Industries() {
               slidesPerView={1}
               className='w-full h-full'
             >
-              {app_data.map((app, index) => (
+              {appData.map((app, index) => (
                 <SwiperSlide key={index}>
                   <div className='grid lg:grid-cols-2 gap-x-8 items-center h-full max-w-5xl px-6 mx-auto lg:max-w-7xl sm:px-8'>
                     <div className='max-w-lg text-left lg:order-1'>
@@ -80,7 +94,9 @@ export default function Industries() {
                         {app.content}
                       </p>
                       <div className='flex items-center justify-start mt-10 gap-x-6 lg:justify-start'>
-                        {(app.google_play_link || app.app_store_link) && (
+                        {(app.google_play_link ||
+                          app.app_store_link ||
+                          app.bazar_link) && (
                           <div className='flex flex-wrap justify-center gap-4 items-center'>
                             {app.google_play_link && (
                               <Link href={app.google_play_link}>
@@ -104,6 +120,17 @@ export default function Industries() {
                                 />
                               </Link>
                             )}
+                            {app.bazar_link && (
+                              <Link href={app.bazar_link}>
+                                <Image
+                                  src='/industries/cafe-logo.svg'
+                                  width={150}
+                                  height={40}
+                                  alt='app-store'
+                                  className='w-[120px] h-[50px]'
+                                />
+                              </Link>
+                            )}
                           </div>
                         )}
                       </div>
@@ -115,7 +142,7 @@ export default function Industries() {
                         alt={app.title}
                         width={500}
                         height={500}
-                        className='w-[200px] h-[400px] lg:w-[225px] lg:h-[450px]'
+                        className='w-[200px] h-[400px] lg:w-[225px] lg:h-[450px] rounded-md'
                       />
                     </div>
                   </div>
