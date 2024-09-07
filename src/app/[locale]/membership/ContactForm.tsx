@@ -72,9 +72,8 @@ export default function Example() {
                   />
                 </dt>
                 <dd>
-                  545 Mavis Island
+                  Tehran, Medan Imam Khmini
                   <br />
-                  Chicago, IL 99191
                 </dd>
               </div>
               <div className='flex gap-x-4'>

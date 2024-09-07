@@ -76,18 +76,48 @@
   },
 
   "contact": {
-    "getInTouch": "Get in touch",
-    "description": "Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut tincidunt integer elementum id sem. Arcu sed malesuada et magna.",
-    "address": "Address",
-    "telephone": "Telephone",
-    "email": "Email",
-    "firstName": "First name",
-    "lastName": "Last name",
-    "phoneNumber": "Phone number",
-    "message": "Message",
-    "sendMessage": "Send message",
-    "location": "545 Mavis Island, Chicago, IL 99191",
-    "tel": "+1 (555) 234-5678",
-    "mail": "hello@example.com"
+    "heading": "Get in Touch",
+    "lead": "If you have any questions, please don't hesitate to reach out to us.",
+    "form": {
+      "firstName": {
+        "label": "First name",
+        "error": "First name is required"
+      },
+      "lastName": {
+        "label": "Last name",
+        "error": "Last name is required"
+      },
+      "email": {
+        "label": "Email",
+        "error": "Email is required",
+        "patternError": "Email address is invalid"
+      },
+      "phone": {
+        "label": "Phone number",
+        "error": "Phone number is required",
+        "patternError": "Phone number is invalid"
+      },
+
+      "message": {
+        "label": "Message",
+        "error": "Message is required"
+      },
+      "submit": {
+        "label": "Submit",
+        "processing": "Processing..."
+      },
+      "responseMessage": "Data is successfully saved",
+      "processingMessage": "Form data is being processed..."
+    },
+
+    "location": {
+      "heading": "location",
+      "lead": "Find Us and Connect with Our Team",
+      "address": {
+        "heading": "Iran",
+        "1stLine": "Midan Imam Khomini",
+        "2ndLine": "Tehran, Iran"
+      }
+    }
   }
 }
