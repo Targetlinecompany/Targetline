@@ -13,7 +13,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { cn } from '@/utils/cn';
 
-import { GithubIcon, InstagramIcon, TelegramIcon } from './Icons';
+import { GithubIcon, TelegramIcon, WhatsAppIcon } from './Icons';
 import LanguageDropdown from './LanguageDropdown';
 
 export default function TopNav() {
@@ -87,12 +87,12 @@ export default function TopNav() {
                       href='#'
                       aria-label='Visit us on Instagram'
                     >
-                      <InstagramIcon className='w-4 h-4 text-gray-100 hover:text-white' />
+                      <WhatsAppIcon className='w-4 h-4 text-gray-100 hover:text-white' />
                     </a>
                     <a
                       target='_blank'
                       rel='noreferrer'
-                      href='@targetlincompany'
+                      href='https://t.me/targetlincompany'
                       aria-label='Visit us on Telegram'
                     >
                       <TelegramIcon className='w-4 h-4 text-gray-100 hover:text-white' />

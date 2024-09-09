@@ -43,7 +43,7 @@ export function Footer() {
     },
     {
       name: 'Telegram',
-      href: 'https://t.me/@targetlincompany',
+      href: 'https://t.me/targetlincompany',
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <TelegramIcon {...props} />
       ),
@@ -59,7 +59,19 @@ export function Footer() {
         Footer
       </h2>
 
-      <Container className='pt-16 pb-8 sm:pt-24 lg:pt-32'>
+      <Container className='pt-16 pb-8'>
+        <div className='relative px-6 mb-8 text-sm leading-6 text-white transition rounded-full ring-1 ring-white hover:ring-gray-300 w-fit'>
+          {t('cta')}{' '}
+          <Link className='font-semibold text-gray-200 group' href='/contact'>
+            <span className='absolute inset-0' aria-hidden='true'></span>
+            <span className='inline-flex flex-row transition-all gap-x-1 group-hover:gap-x-2 text-white'>
+              {t('ctaLink')}{' '}
+              <span aria-hidden='true' className='rtl:rotate-180'>
+                →
+              </span>
+            </span>
+          </Link>
+        </div>
         <div className='max-w-2xl mx-auto xl:grid xl:grid-cols-5 xl:gap-32 lg:mx-0 lg:max-w-none'>
           <div className='space-y-8 xl:col-span-2'>
             <Image

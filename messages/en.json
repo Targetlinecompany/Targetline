@@ -1,6 +1,6 @@
 {
   "topNav": {
-    "address": "Medan Khomani, Tehran, Iran",
+    "address": "Ahmadabad, Mashhad, Iran",
     "phone": "09961740933",
     "email": "targetlinecompany@targetline.net",
     "languages": {
@@ -16,7 +16,7 @@
   },
   "about": {
     "boss": "Ali Reza Jafari - Company Manager",
-    "speech": "- With 17 years of experience across diverse markets, Targetline has attained unmatched expertise in sales and market psychology, spanning various industries. The addition of more specialists to the Targetline team, as well as academic disciplines such as coaching, entrepreneurship, talent acquisition, sales, marketing, advertising, psychology, sociology, and philosophy have bolstered our company’s ability - The next phase for Targetline revolves around IT sciences and virtual markets due to the recent surge in virtual sales. Consequently, we have established a team of experts in this field to deliver our services more professionally in website and application design and development. _ I recommend visiting our Targetline experts for further acquaintance",
+    "speech": "With 17 years of experience across diverse markets, Targetline has attained unmatched expertise in sales and market psychology. \n\nOur team has enhanced its capabilities by adding new specialists and incorporating knowledge from fields such as coaching, entrepreneurship, talent acquisition, sales, marketing, advertising, psychology, sociology, and philosophy. \n\nThe next phase for Targetline focuses on IT sciences and virtual markets, driven by the recent surge in online sales. Consequently, we have assembled a team of experts in this field to deliver more professional services in website and application design and development. \n\nOur goal is to boost your sales so your customers will never forget you.",
     "title": "Meet our team",
     "lead": "The Experts and Innovators Behind Our Success."
   },
@@ -27,7 +27,9 @@
     "membership": "Membership",
     "backToTop": "Back to top",
     "copyright": "© {date} Target Line. All rights reserved.",
-    "develop": "develop with MarsCoders team."
+    "develop": "develop with MarsCoders team.",
+    "cta": "Do you want to increase your selling power?",
+    "ctaLink": "Get in touch"
   },
   "partners": {
     "title": "Companies that have trusted us",
@@ -68,8 +70,6 @@
     }
   },
   "hero": {
-    "cta": "Do you want to increase your selling power?",
-    "ctaLink": "Get in touch",
     "title": "Our goal is to boost your sales",
     "description": "Your customers will never forget you.",
     "buttonText": "Get in touch"

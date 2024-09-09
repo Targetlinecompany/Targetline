@@ -151,13 +151,13 @@ export default function About() {
           className='mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4'
         >
           {team.map((src) => (
-            <li key={src}>
+            <li key={src} className='flex flex-col bg-transparent'>
               <Image
                 width={192}
                 height={192}
                 alt=''
                 src={`/images/${src}`}
-                className='aspect-[14/13] w-full rounded-2xl object-cover'
+                className='object-cover h-full w-full rounded-xl'
               />
             </li>
           ))}

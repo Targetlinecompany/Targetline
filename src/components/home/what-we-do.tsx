@@ -13,24 +13,24 @@ export default function WhatWEDo() {
       icon: '/svg/buy-crypto.svg',
     },
     {
-      key: 'ai',
-      icon: '/svg/cpu.svg',
+      key: 'web',
+      icon: '/svg/monitor.svg',
     },
     {
       key: 'mobile',
       icon: '/svg/mobile.svg',
     },
     {
-      key: 'web',
-      icon: '/svg/monitor.svg',
-    },
-    {
-      key: 'uiUx',
-      icon: '/svg/figma.svg',
+      key: 'ai',
+      icon: '/svg/cpu.svg',
     },
     {
       key: 'dataScience',
       icon: '/svg/driver.svg',
+    },
+    {
+      key: 'uiUx',
+      icon: '/svg/figma.svg',
     },
   ];
 

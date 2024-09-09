@@ -8,11 +8,11 @@ export default function AudioPlayer() {
     const direction = document.documentElement.getAttribute('dir');
 
     if (direction === 'rtl') {
-      setAudioSrc('/voice/english.mp3');
-    } else {
       setAudioSrc('/voice/persian.mp3');
+    } else {
+      setAudioSrc('/voice/english.mp3');
     }
   }, []);
 
-  return <audio src={audioSrc} controls autoPlay></audio>;
+  return <audio src={audioSrc} controls autoPlay className='mt-4'></audio>;
 }

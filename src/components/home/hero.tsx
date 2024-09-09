@@ -40,23 +40,6 @@ export default function Hero() {
         </svg>
         <div className='mx-auto max-w-7xl px-6 py-24 sm:py-8 lg:flex lg:items-center md:h-screen lg:gap-x-10 lg:px-8 lg:py-6 font-normal'>
           <div className='mx-auto max-w-2xl lg:mx-0 lg:flex-auto'>
-            <div className='hidden sm:mb-8 sm:flex'>
-              <div className='relative px-3 text-sm leading-6 text-white transition rounded-full ring-1 ring-white hover:ring-gray-300'>
-                {t('cta')}{' '}
-                <Link
-                  className='font-semibold text-gray-200 group'
-                  href='/contact'
-                >
-                  <span className='absolute inset-0' aria-hidden='true'></span>
-                  <span className='inline-flex flex-row transition-all gap-x-1 group-hover:gap-x-2 text-white'>
-                    {t('ctaLink')}{' '}
-                    <span aria-hidden='true' className='rtl:rotate-180'>
-                      →
-                    </span>
-                  </span>
-                </Link>
-              </div>
-            </div>
             <h1 className='text-4xl font-bold tracking-tight text-gray-300 sm:text-4xl md:text-4xl lg:text-5xl'>
               {t('title')}
             </h1>
