@@ -32,11 +32,11 @@ export default function AnimatedSocialMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='flex justify-end p-4 w-full'>
+    <div className='flex justify-end p-2'>
       <div className='relative w-max'>
         <div
           className={cn(
-            'bg-ternary_color rounded-full p-4 flex justify-center items-center w-max transition-all duration-200',
+            'bg-ternary_color rounded-full p-2 flex justify-center items-center w-max transition-all duration-200',
             isOpen && 'bg-white text-black shadow-md'
           )}
           onClick={() => setIsOpen(!isOpen)}

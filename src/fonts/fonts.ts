@@ -1,8 +1,8 @@
-import { Montserrat } from 'next/font/google';
+import { Amiri } from 'next/font/google';
 
-export const montserrat = Montserrat({
+export const montserrat = Amiri({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '700'],
   display: 'swap',
   preload: false,
   variable: '--font-montserrat',

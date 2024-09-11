@@ -56,11 +56,11 @@ export default function RootLayout({
       dir={locale === 'en' ? 'ltr' : 'rtl'}
       className={montserrat.className}
     >
-      <body className='scroll-smooth'>
+      <body className='scroll-smooth relative'>
         <LocaleWrapper locale={locale}>
           <Header />
           {children}
-          <div className='fixed bottom-0 left-0 right-10 z-50' dir='ltr'>
+          <div className='fixed bottom-2 right-2 z-50 h-fit w-fit' dir='ltr'>
             <AnimatedSocialMenu />
           </div>
           <Footer />
