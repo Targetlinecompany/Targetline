@@ -77,7 +77,8 @@
 
   "contact": {
     "heading": "Get in Touch",
-    "lead": "If you have any questions, please don't hesitate to reach out to us.",
+    "lead": "For more information or to collaborate with Target Line, you can contact us through the following details. Our team is ready to answer your inquiries and provide services.",
+    "address": "Ahmadabad, Mashhad, Iran",
     "form": {
       "firstName": {
         "label": "First name",

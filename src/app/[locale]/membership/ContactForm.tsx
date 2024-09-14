@@ -3,10 +3,12 @@ import {
   EnvelopeIcon,
   PhoneIcon,
 } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 
 export default function Example() {
+  const t = useTranslations('contact');
   return (
-    <div className='relative isolate bg-gray-900' dir='ltr'>
+    <div className='relative isolate bg-gray-900'>
       <div className='mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2'>
         <div className='relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48'>
           <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg'>
@@ -55,13 +57,9 @@ export default function Example() {
               </div>
             </div>
             <h2 className='text-3xl font-bold tracking-tight text-white'>
-              Get in touch
+              {t('heading')}
             </h2>
-            <p className='mt-6 text-lg leading-8 text-gray-300'>
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci
-              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
-            </p>
+            <p className='mt-6 text-lg leading-8 text-gray-300'>{t('lead')}</p>
             <dl className='mt-10 space-y-4 text-base leading-7 text-gray-300'>
               <div className='flex gap-x-4'>
                 <dt className='flex-none'>
@@ -72,7 +70,7 @@ export default function Example() {
                   />
                 </dt>
                 <dd>
-                  Tehran, Medan Imam Khmini
+                  {t('address')}
                   <br />
                 </dd>
               </div>
@@ -85,8 +83,8 @@ export default function Example() {
                   />
                 </dt>
                 <dd>
-                  <a href='tel:+1 (555) 234-5678' className='hover:text-white'>
-                    +1 (555) 234-5678
+                  <a href='tel:09961740933' className='hover:text-white'>
+                    09961740933
                   </a>
                 </dd>
               </div>
@@ -100,10 +98,10 @@ export default function Example() {
                 </dt>
                 <dd>
                   <a
-                    href='mailto:hello@example.com'
+                    href='mailto:targetlinecompany@targetline.net'
                     className='hover:text-white'
                   >
-                    hello@example.com
+                    targetlinecompany@targetline.net
                   </a>
                 </dd>
               </div>
@@ -122,7 +120,7 @@ export default function Example() {
                   htmlFor='first-name'
                   className='block text-sm font-semibold leading-6 text-white'
                 >
-                  First name
+                  {t('form.firstName.label')}
                 </label>
                 <div className='mt-2.5'>
                   <input
@@ -139,7 +137,7 @@ export default function Example() {
                   htmlFor='last-name'
                   className='block text-sm font-semibold leading-6 text-white'
                 >
-                  Last name
+                  {t('form.lastName.label')}
                 </label>
                 <div className='mt-2.5'>
                   <input
@@ -156,7 +154,7 @@ export default function Example() {
                   htmlFor='email'
                   className='block text-sm font-semibold leading-6 text-white'
                 >
-                  Email
+                  {t('form.email.label')}
                 </label>
                 <div className='mt-2.5'>
                   <input
@@ -173,7 +171,7 @@ export default function Example() {
                   htmlFor='phone-number'
                   className='block text-sm font-semibold leading-6 text-white'
                 >
-                  Phone number
+                  {t('form.phone.label')}
                 </label>
                 <div className='mt-2.5'>
                   <input
@@ -190,7 +188,7 @@ export default function Example() {
                   htmlFor='message'
                   className='block text-sm font-semibold leading-6 text-white'
                 >
-                  Message
+                  {t('form.message.label')}
                 </label>
                 <div className='mt-2.5'>
                   <textarea
@@ -208,7 +206,7 @@ export default function Example() {
                 type='submit'
                 className='rounded-md bg-[#005b8e] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#005b8e]'
               >
-                Send message
+                {t('form.submit.label')}
               </button>
             </div>
           </div>
