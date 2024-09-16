@@ -1,4 +1,5 @@
 import { Montserrat } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const montserrat = Montserrat({
   subsets: ['latin'],
@@ -6,4 +7,9 @@ export const montserrat = Montserrat({
   display: 'swap',
   preload: false,
   variable: '--font-montserrat',
+});
+
+export const farsi = localFont({
+  src: '../../public/IRANSansWeb.ttf',
+  display: 'swap',
 });

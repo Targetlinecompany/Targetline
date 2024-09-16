@@ -10,7 +10,7 @@ import LocaleWrapper from '@/components/providers/LocaleWrapper';
 import AnimatedSocialMenu from '@/components/social';
 
 import { siteConfig } from '@/constant/config';
-import { montserrat } from '@/fonts/fonts';
+import { farsi, montserrat } from '@/fonts/fonts';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -55,7 +55,7 @@ export default function RootLayout({
     <html
       lang={locale}
       dir={locale === 'en' ? 'ltr' : 'rtl'}
-      className={montserrat.className}
+      className={`${montserrat.variable} rtl:${farsi}`}
     >
       <body className='scroll-smooth relative'>
         <Toaster
