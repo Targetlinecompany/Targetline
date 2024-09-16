@@ -17,7 +17,7 @@ const socialIcons = [
   },
   {
     icon: PiTelegramLogo,
-    href: 'https://t.me/@targetlincompany',
+    href: 'https://t.me/targetlincompany',
     colorCode: '#24A1DE',
   },
   {

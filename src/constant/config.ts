@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: 'Target Line Company',
+  title: 'Targetline Company',
   description: 'Company that provide usable softwares and ',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://target-line.vercel.app',

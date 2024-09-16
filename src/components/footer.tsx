@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/Container';
 import { Link } from '@/navigation';
 
 import { BackToTop } from './BackToTop';
-import { GithubIcon, InstagramIcon, TelegramIcon } from './icons';
+import { GithubIcon, TelegramIcon, WhatsAppIcon } from './icons';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -38,7 +38,7 @@ export function Footer() {
       name: 'Instagram',
       href: '',
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
-        <InstagramIcon {...props} />
+        <WhatsAppIcon {...props} />
       ),
     },
     {
@@ -59,19 +59,7 @@ export function Footer() {
         Footer
       </h2>
 
-      <Container className='pt-16 pb-8'>
-        <div className='relative px-6 mb-8 text-sm leading-6 text-white transition rounded-full ring-1 ring-white hover:ring-gray-300 w-fit'>
-          {t('cta')}{' '}
-          <Link className='font-semibold text-gray-200 group' href='/contact'>
-            <span className='absolute inset-0' aria-hidden='true'></span>
-            <span className='inline-flex flex-row transition-all gap-x-1 group-hover:gap-x-2 text-white'>
-              {t('ctaLink')}{' '}
-              <span aria-hidden='true' className='rtl:rotate-180'>
-                →
-              </span>
-            </span>
-          </Link>
-        </div>
+      <Container className='pt-8 pb-8'>
         <div className='max-w-2xl mx-auto xl:grid xl:grid-cols-5 xl:gap-32 lg:mx-0 lg:max-w-none'>
           <div className='space-y-8 xl:col-span-2'>
             <Image
@@ -122,7 +110,19 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className='flex flex-col justify-between max-w-2xl pt-8 mx-auto mt-16 border-t border-white/10 sm:mt-20 lg:mt-24 lg:mx-0 lg:max-w-none sm:flex-row gap-y-4'>
+        <div className='relative px-6 text-sm leading-6 text-white transition rounded-full ring-1 ring-white hover:ring-gray-300 w-fit mt-6'>
+          {t('cta')}{' '}
+          <Link className='font-semibold text-gray-200 group' href='/contact'>
+            <span className='absolute inset-0' aria-hidden='true'></span>
+            <span className='inline-flex flex-row transition-all gap-x-1 group-hover:gap-x-2 text-white'>
+              {t('ctaLink')}{' '}
+              <span aria-hidden='true' className='rtl:rotate-180'>
+                →
+              </span>
+            </span>
+          </Link>
+        </div>
+        <div className='flex flex-col justify-between max-w-2xl pt-2 mx-auto mt-4 border-t border-white/10 sm:mt-20 lg:mt-6 lg:mx-0 lg:max-w-none sm:flex-row gap-y-4'>
           <div>
             <p className='text-sm leading-5 text-gray-400'>
               {t('copyright', { date: new Date().getFullYear() })}

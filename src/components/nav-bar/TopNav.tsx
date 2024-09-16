@@ -50,7 +50,7 @@ export default function TopNav() {
                   <p className='flex items-center text-xs text-gray-100 dir-ltr gap-x-1'>
                     <PhoneIcon className='size-4 rtl:-rotate-90 ltr:rotate-0' />
                     <Link
-                      href='tel:09961740933'
+                      href='tel:00989961740933'
                       className='font-medium tabular-nums'
                     >
                       {t('phone')}

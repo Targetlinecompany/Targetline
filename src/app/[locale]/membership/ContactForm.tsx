@@ -1,3 +1,23 @@
+'use client';
+import React, { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+  firstName: z.string().min(1, 'First name is required'),
+  lastName: z.string().min(1, 'Last name is required'),
+  email: z.string().email('Invalid email address'),
+  phone: z
+    .string()
+    .min(1, 'Phone is required')
+    .regex(
+      /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/,
+      'Invalid phone number'
+    ),
+  message: z.string().min(1, 'Message is required'),
+  subject: z.string().min(1, 'Subject is required'),
+});
+
 import {
   BuildingOffice2Icon,
   EnvelopeIcon,
@@ -5,8 +25,82 @@ import {
 } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 
-export default function Example() {
+export default function ContactForm() {
   const t = useTranslations('contact');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+    subject: '',
+    budget: '',
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Validate form data using Zod schema
+    const validationResult = contactSchema.safeParse(formData);
+
+    if (!validationResult.success) {
+      const newErrors = validationResult.error.errors.reduce((acc, curr) => {
+        acc[curr.path[0] as string] = curr.message;
+        return acc;
+      }, {} as Record<string, string>);
+      setErrors(newErrors);
+      setLoading(false);
+      return;
+    }
+
+    // Clear errors if validation passed
+    setErrors({});
+
+    // Combine firstName and lastName into fullName
+    const { firstName, lastName, ...rest } = formData;
+    const fullName = `${firstName} ${lastName}`;
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...rest, fullName }), // Send the fullName along with other fields
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      toast.success('Message sent successfully');
+
+      // Clear the form fields
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        phone: '',
+        message: '',
+        budget: '',
+      });
+    } catch (error) {
+      toast.error('Failed to send message');
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className='relative isolate bg-gray-900'>
       <div className='mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2'>
@@ -83,8 +177,8 @@ export default function Example() {
                   />
                 </dt>
                 <dd>
-                  <a href='tel:09961740933' className='hover:text-white'>
-                    09961740933
+                  <a href='tel:00989961740933' className='hover:text-white'>
+                    00989961740933
                   </a>
                 </dd>
               </div>
@@ -109,8 +203,7 @@ export default function Example() {
           </div>
         </div>
         <form
-          action='#'
-          method='POST'
+          onSubmit={handleSubmit}
           className='px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48'
         >
           <div className='mx-auto max-w-xl lg:mr-0 lg:max-w-lg'>
@@ -125,11 +218,18 @@ export default function Example() {
                 <div className='mt-2.5'>
                   <input
                     id='first-name'
-                    name='first-name'
                     type='text'
                     autoComplete='given-name'
                     className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[#005b8e] sm:text-sm sm:leading-6'
+                    name='firstName'
+                    value={formData.firstName}
+                    onChange={handleChange}
                   />
+                  {errors.firstName && (
+                    <p className='text-red-400 w-full mt-1 px-2 text-sm'>
+                      {errors.firstName}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
@@ -142,11 +242,18 @@ export default function Example() {
                 <div className='mt-2.5'>
                   <input
                     id='last-name'
-                    name='last-name'
                     type='text'
                     autoComplete='family-name'
                     className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[#005b8e] sm:text-sm sm:leading-6'
+                    name='lastName'
+                    value={formData.lastName}
+                    onChange={handleChange}
                   />
+                  {errors.lastName && (
+                    <p className='text-red-400 w-full mt-1 px-2 text-sm'>
+                      {errors.lastName}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className='sm:col-span-2'>
@@ -163,7 +270,14 @@ export default function Example() {
                     type='email'
                     autoComplete='email'
                     className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[#005b8e] sm:text-sm sm:leading-6'
+                    value={formData.email}
+                    onChange={handleChange}
                   />
+                  {errors.email && (
+                    <p className='text-red-400 w-full mt-1 px-2 text-sm'>
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className='sm:col-span-2'>
@@ -176,11 +290,18 @@ export default function Example() {
                 <div className='mt-2.5'>
                   <input
                     id='phone-number'
-                    name='phone-number'
+                    name='phone'
                     type='tel'
                     autoComplete='tel'
                     className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[#005b8e] sm:text-sm sm:leading-6'
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
+                  {errors.phone && (
+                    <p className='text-red-400 w-full mt-1 px-2 text-sm'>
+                      {errors.phone}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className='sm:col-span-2'>
@@ -197,7 +318,14 @@ export default function Example() {
                     rows={4}
                     className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[#005b8e] sm:text-sm sm:leading-6'
                     defaultValue=''
+                    value={formData.message}
+                    onChange={handleChange}
                   />
+                  {errors.message && (
+                    <p className='text-red-400 text-left w-full mt-1 px-4 text-xs'>
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -206,7 +334,7 @@ export default function Example() {
                 type='submit'
                 className='rounded-md bg-[#005b8e] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#005b8e]'
               >
-                {t('form.submit.label')}
+                {loading ? t('form.submit.processing') : t('form.submit.label')}
               </button>
             </div>
           </div>

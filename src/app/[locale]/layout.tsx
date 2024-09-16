@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import * as React from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import '@/styles/globals.css';
 
@@ -57,6 +58,14 @@ export default function RootLayout({
       className={montserrat.className}
     >
       <body className='scroll-smooth relative'>
+        <Toaster
+          toastOptions={{
+            style: {
+              background: 'rgb(51, 65, 85) ',
+              color: '#fff',
+            },
+          }}
+        />
         <LocaleWrapper locale={locale}>
           <Header />
           {children}

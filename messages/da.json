@@ -1,7 +1,7 @@
 {
   "topNav": {
     "address": " ایران ، مشهد ، احمدآباد",
-    "phone": "09961740933",
+    "phone": "00989961740933",
     "email": "targetlinecompany@targetline.net",
     "languages": {
       "label": "زبان",
@@ -95,7 +95,7 @@
         "patternError": "آدرس الکترونیک اشتباه است"
       },
       "phone": {
-        "label": "نمبر تلفن",
+        "label": "شماره تلفن",
         "error": "نمبر تلفن ضروری است",
         "patternError": "شماره تماس اشتباه است"
       },
@@ -121,7 +121,7 @@
         "2ndLine": "هرات، افغانستان"
       },
       "email": "targetlinecompany@targetline.net",
-      "phone": "09961740933"
+      "phone": "00989961740933"
     }
   }
 }

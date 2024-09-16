@@ -26,10 +26,10 @@ export default function Industries() {
 
   const logos = [
     '/industries/digi-logo.svg',
-    '/industries/quick-logo.png',
+    '/industries/fly.svg',
     '/industries/handy-logo.png',
     '/industries/ddr-logo.jpg',
-    '/industries/dol-logo.png',
+    '/industries/Shad_logo.png',
   ];
 
   const pagination = {
