@@ -59,7 +59,7 @@ export default function TopNav() {
                   <p className='flex items-center text-xs text-gray-100 dir-ltr gap-x-1'>
                     <EnvelopeIcon className='size-4' />
                     <Link
-                      href='mailto:targetlinecompany@targetline.net'
+                      href='mailto:company@targetline.net'
                       className='font-sans font-medium'
                     >
                       {t('email')}

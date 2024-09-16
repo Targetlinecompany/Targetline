@@ -24,7 +24,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   const transport: Transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'mail.microcis.net',
+    port: 465,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASS,
@@ -61,6 +62,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     return NextResponse.json({ message: 'Emails sent' });
   } catch (err) {
+    console.log('error', err);
+
     return NextResponse.json({ error: err }, { status: 500 });
   }
 }

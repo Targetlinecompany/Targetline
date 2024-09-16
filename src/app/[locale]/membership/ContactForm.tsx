@@ -15,7 +15,6 @@ const contactSchema = z.object({
       'Invalid phone number'
     ),
   message: z.string().min(1, 'Message is required'),
-  subject: z.string().min(1, 'Subject is required'),
 });
 
 import {
@@ -33,8 +32,6 @@ export default function ContactForm() {
     email: '',
     phone: '',
     message: '',
-    subject: '',
-    budget: '',
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -59,6 +56,7 @@ export default function ContactForm() {
         return acc;
       }, {} as Record<string, string>);
       setErrors(newErrors);
+
       setLoading(false);
       return;
     }
@@ -82,7 +80,6 @@ export default function ContactForm() {
       if (!response.ok) {
         throw new Error('Failed to send message');
       }
-
       toast.success('Message sent successfully');
 
       // Clear the form fields
@@ -90,10 +87,8 @@ export default function ContactForm() {
         firstName: '',
         lastName: '',
         email: '',
-        subject: '',
         phone: '',
         message: '',
-        budget: '',
       });
     } catch (error) {
       toast.error('Failed to send message');
@@ -192,10 +187,10 @@ export default function ContactForm() {
                 </dt>
                 <dd>
                   <a
-                    href='mailto:targetlinecompany@targetline.net'
+                    href='mailto:company@targetline.net'
                     className='hover:text-white'
                   >
-                    targetlinecompany@targetline.net
+                    company@targetline.net
                   </a>
                 </dd>
               </div>
@@ -227,7 +222,7 @@ export default function ContactForm() {
                   />
                   {errors.firstName && (
                     <p className='text-red-400 w-full mt-1 px-2 text-sm'>
-                      {errors.firstName}
+                      {t('form.firstName.error')}
                     </p>
                   )}
                 </div>
@@ -251,7 +246,7 @@ export default function ContactForm() {
                   />
                   {errors.lastName && (
                     <p className='text-red-400 w-full mt-1 px-2 text-sm'>
-                      {errors.lastName}
+                      {t('form.lastName.error')}
                     </p>
                   )}
                 </div>
@@ -275,7 +270,7 @@ export default function ContactForm() {
                   />
                   {errors.email && (
                     <p className='text-red-400 w-full mt-1 px-2 text-sm'>
-                      {errors.email}
+                      {t('form.email.error')}
                     </p>
                   )}
                 </div>
@@ -299,7 +294,7 @@ export default function ContactForm() {
                   />
                   {errors.phone && (
                     <p className='text-red-400 w-full mt-1 px-2 text-sm'>
-                      {errors.phone}
+                      {t('form.phone.error')}
                     </p>
                   )}
                 </div>
@@ -317,13 +312,12 @@ export default function ContactForm() {
                     name='message'
                     rows={4}
                     className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[#005b8e] sm:text-sm sm:leading-6'
-                    defaultValue=''
                     value={formData.message}
                     onChange={handleChange}
                   />
                   {errors.message && (
                     <p className='text-red-400 text-left w-full mt-1 px-4 text-xs'>
-                      {errors.message}
+                      {t('form.message.error')}
                     </p>
                   )}
                 </div>
