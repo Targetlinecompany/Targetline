@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer, { Transporter } from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
@@ -24,11 +23,15 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   const transport: Transporter = nodemailer.createTransport({
-    host: 'mail.microcis.net',
-    port: 465,
+    host: 'mail.targetline.net',
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false, // For debugging purposes only
     },
   });
 
@@ -55,15 +58,12 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   };
 
   try {
-    // Send emails to all admins
     await Promise.all(
       adminEmails.map((email) => sendMail(adminMailOptions(email)))
     );
 
     return NextResponse.json({ message: 'Emails sent' });
   } catch (err) {
-    console.log('error', err);
-
     return NextResponse.json({ error: err }, { status: 500 });
   }
 }
