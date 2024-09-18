@@ -82,7 +82,7 @@ export function Header() {
               <Link href='/' aria-label='Home'>
                 <Image
                   src='/images/targetline-logo.png'
-                  alt='ُTarget line logo'
+                  alt='ُTargetline logo'
                   width={720}
                   height={431}
                   className={cn(

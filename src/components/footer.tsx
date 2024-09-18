@@ -89,7 +89,7 @@ export function Footer() {
             </div>
           </div>
           <div className='grid grid-cols-1 gap-8 mt-3 sm:mt-16 xl:col-span-3 xl:mt-0 mx-8'>
-            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
               <div>
                 <ul
                   role='list'
