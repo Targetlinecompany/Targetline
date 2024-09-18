@@ -24,8 +24,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
   const transport: Transporter = nodemailer.createTransport({
     host: 'mail.targetline.net',
-    port: 587,
-    secure: false,
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASS,
@@ -64,6 +64,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     return NextResponse.json({ message: 'Emails sent' });
   } catch (err) {
+    // eslint-disable-next-line no-console
+    console.log('error email', err);
+
     return NextResponse.json({ error: err }, { status: 500 });
   }
 }

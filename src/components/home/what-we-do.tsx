@@ -35,7 +35,7 @@ export default function WhatWEDo() {
   ];
 
   return (
-    <div className='bg-gray-900 py-28 sm:py-36'>
+    <div className='bg-gray-900 py-6 sm:py-10'>
       <div className='px-6 mx-auto max-w-7xl lg:px-8'>
         <div className='max-w-2xl'>
           <h2 className='text-base font-semibold leading-7 text-ourBlue'>
