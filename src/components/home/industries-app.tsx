@@ -93,7 +93,7 @@ export default function Industries() {
                       <p className='mt-6 mb-2 text-lg leading-8 text-gray-200'>
                         {app.content}
                       </p>
-                      <div className='flex items-center justify-start mt-10 gap-x-6 lg:justify-start'>
+                      <div className='flex items-center justify-start mb-4 sm:mb-0 mt-3 sm:mt-10 gap-x-6 lg:justify-start'>
                         {(app.google_play_link ||
                           app.app_store_link ||
                           app.bazar_link) && (
@@ -105,7 +105,7 @@ export default function Industries() {
                                   width={150}
                                   height={70}
                                   alt='google-play'
-                                  className='w-[150px] h-[100px]'
+                                  className='sm:w-[150px] sm:h-[100px] w-[70px] h-[60px]'
                                 />
                               </Link>
                             )}
@@ -116,7 +116,7 @@ export default function Industries() {
                                   width={150}
                                   height={40}
                                   alt='app-store'
-                                  className='w-[150px] h-[70px]'
+                                  className='sm:w-[150px] sm:h-[70px] w-[70px] h-[60px]'
                                 />
                               </Link>
                             )}
@@ -127,7 +127,18 @@ export default function Industries() {
                                   width={150}
                                   height={40}
                                   alt='app-store'
-                                  className='w-[120px] h-[50px]'
+                                  className='sm:w-[120px] sm:h-[50px] w-[70px] h-[60px]'
+                                />
+                              </Link>
+                            )}
+                            {app.link && (
+                              <Link href={app.link}>
+                                <Image
+                                  src='/industries/google.png'
+                                  width={130}
+                                  height={60}
+                                  alt='app-store'
+                                  className='sm:w-[100px] sm:h-[70px] w-[70px] h-[60px]'
                                 />
                               </Link>
                             )}

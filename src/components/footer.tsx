@@ -88,12 +88,12 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className='grid grid-cols-1 gap-8 mt-16 xl:col-span-3 xl:mt-0'>
+          <div className='grid grid-cols-1 gap-8 mt-3 sm:mt-16 xl:col-span-3 xl:mt-0 mx-8'>
             <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
               <div>
                 <ul
                   role='list'
-                  className='mt-6  flex gap-6 justify-center items-start'
+                  className='mt-3 sm:mt-6  flex gap-6 justify-center items-start'
                 >
                   {navigation.map((item, idx) => (
                     <li key={idx}>
@@ -112,7 +112,10 @@ export function Footer() {
         </div>
         <div className='relative px-6 text-sm leading-6 text-white transition rounded-full ring-1 ring-white hover:ring-gray-300 w-fit mt-6'>
           {t('cta')}{' '}
-          <Link className='font-semibold text-gray-200 group' href='/contact'>
+          <Link
+            className='sm:font-semibold text-gray-200 group'
+            href='/contact'
+          >
             <span className='absolute inset-0' aria-hidden='true'></span>
             <span className='inline-flex flex-row transition-all gap-x-1 group-hover:gap-x-2 text-white'>
               {t('ctaLink')}{' '}
@@ -127,7 +130,7 @@ export function Footer() {
             <p className='text-sm leading-5 text-gray-400'>
               {t('copyright', { date: new Date().getFullYear() })}
             </p>
-            <p className='text-xs leading-5 text-gray-400'>{t('develop')}</p>
+
             <p className='mt-2 text-xs leading-5 text-gray-400 sr-only'>
               Built with love by{' '}
               <a
