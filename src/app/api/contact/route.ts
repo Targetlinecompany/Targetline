@@ -30,9 +30,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASS,
     },
-    tls: {
-      rejectUnauthorized: false, // For debugging purposes only
-    },
   });
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
