@@ -23,12 +23,15 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   const transport: Transporter = nodemailer.createTransport({
-    host: 'mail.targetline.net',
+    host: 'server10c.irwebspace.com',
     port: 587,
     secure: false,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
   });
 
