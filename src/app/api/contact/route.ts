@@ -23,9 +23,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   const transport: Transporter = nodemailer.createTransport({
-    host: 'mail.targetline.net',
-    port: 587,
-    secure: false,
+    host: 'mail.microcis.net',
+    port: 465,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASS,
