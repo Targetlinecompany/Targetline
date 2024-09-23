@@ -114,7 +114,7 @@ export function Footer() {
           {t('cta')}{' '}
           <Link
             className='sm:font-semibold text-gray-200 group'
-            href='/contact'
+            href='/membership'
           >
             <span className='absolute inset-0' aria-hidden='true'></span>
             <span className='inline-flex flex-row transition-all gap-x-1 group-hover:gap-x-2 text-white'>

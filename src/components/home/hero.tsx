@@ -48,7 +48,7 @@ export default function Hero() {
             </p>
             <div className='mt-6 flex items-center gap-x-6'>
               <Link
-                href='/book-meeting'
+                href='/membership'
                 className='rounded-lg bg-[#005b8e] px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-ourBlueLighter duration-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
               >
                 {t('buttonText')}
