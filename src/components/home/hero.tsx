@@ -1,7 +1,8 @@
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import ImageHero from '@/components/home/ImageHero';
+
+import { Link } from '@/navigation';
 
 export default function Hero() {
   const t = useTranslations('hero');

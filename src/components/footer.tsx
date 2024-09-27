@@ -36,7 +36,7 @@ export function Footer() {
     },
     {
       name: 'Instagram',
-      href: '',
+      href: 'https://wa.me/00989961740933',
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <WhatsAppIcon {...props} />
       ),

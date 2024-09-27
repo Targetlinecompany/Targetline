@@ -84,7 +84,7 @@ export default function TopNav() {
                     <a
                       target='_blank'
                       rel='noreferrer'
-                      href='#'
+                      href='https://wa.me/00989961740933'
                       aria-label='Visit us on Instagram'
                     >
                       <WhatsAppIcon className='w-4 h-4 text-gray-100 hover:text-white' />
